@@ -1,31 +1,33 @@
 // TODO: Include packages needed for this application
+const inquirer = require('inquirer')
 const markdown = require('./generateMarkdown.js');
 const fs = require('fs');
+
 // TODO: Create an array of questions for user input
-const questions = [
+inquirer.prompt = ([
     {
         type: 'input',
-        name: 'Title Name',
+        name: 'title',
         message: 'What is your project title?',
     },
     {
         type: 'input',
-        name: 'Project Description',
+        name: 'description',
         message: 'Provide your project description explaining motivation, what problem it solves, and what you learned?',
     },
     {
         type: 'input',
-        name: 'Installation',
+        name: 'installation',
         message: 'How do users use your project? What are the steps to installation?',
     },
     {
         type: 'input',
-        name: 'Usage Information',
+        name: 'usage',
         message: 'Please provide instructions on how to use your project and provide examples via screenshots.',
     },
     {
         type: 'input',
-        name: 'Credits',
+        name: 'credits',
         message: 'Please create your list of your collaborators/third party assets and provide the necessary links to each.',
     },
     {
@@ -36,11 +38,22 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'GitHub URL',
+        name: 'gitHub',
         message: 'Please proivde your GitHub URL',
     },
-];
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please proivde your email address',
+    },
+])
+.then((answers) => {
+    const readmeContent = generateMarkdown(answers);
 
+    fs.writeFile('README.md', readmeContent, (err) =>
+      err ? console.log(err) : console.log('Successfully created README.md file!')
+    );
+  });
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { }
 
