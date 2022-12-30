@@ -19,11 +19,11 @@ function generateMarkdown(data) {
   
   ## Table of Contents
 
-  - [Description](#Description)
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [Credits](#Credits)
-  - [License](#License)
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
   
   ## Installation
   ${data.installation}
@@ -35,7 +35,7 @@ function generateMarkdown(data) {
   ${data.credits}
   
   ## License
-  ${data.license}
+  ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)
 
   ## Badges
   
