@@ -1,10 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
-const markdown = require('./generateMarkdown.js');
+const generateMarkdown = require('./generateMarkdown');
 const fs = require('fs');
 
 // TODO: Create an array of questions for user input
-inquirer.prompt = ([
+const questions = [
     {
         type: 'input',
         name: 'title',
@@ -34,7 +34,7 @@ inquirer.prompt = ([
         type: 'list', //badge needs to get added to the top of the 
         name: 'license',
         message: 'Enter your LinkedIn URL.',
-        choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'Mozilla Public License 2.0', 'Creative Commons Zerov1.0 Universal', 'Boost Software License']
+        choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'Mozilla Public License 2.0', 'Boost Software License']
     },
     {
         type: 'input',
@@ -46,19 +46,15 @@ inquirer.prompt = ([
         name: 'email',
         message: 'Please proivde your email address',
     },
-])
-.then((answers) => {
+]
+function init() {
+    inquirer.prompt(questions).then((answers) => {
     const readmeContent = generateMarkdown(answers);
 
     fs.writeFile('README.md', readmeContent, (err) =>
       err ? console.log(err) : console.log('Successfully created README.md file!')
     );
   });
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+};
 
-// TODO: Create a function to initialize app
-function init() { }
-
-// Function call to initialize app
 init();
