@@ -1,30 +1,10 @@
-apacheLicense = 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) { 
-  const licenseBadge = license ? `https://img.shields.io/github/${data.license}` : '';
- 
-}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  return " ";
- }
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
- 
-  return " ";
- }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
+function generateMarkdown(answers) {
+  return `# ${answers.title}
 
   ## Description
-  ${data.description}
+  ${answers.description}
   
   ## Table of Contents
 
@@ -35,22 +15,23 @@ function generateMarkdown(data) {
   - [License](#license)
   
   ## Installation
-  ${data.installation}
+  ${answers.installation}
 
   ## Usage
-  ${data.usage}
+  ${answers.usage}
  
   ## Credits
-  ${data.credits}
+  ${answers.credits}
   
   ## License
-  [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+ [![License](https://img.shields.io/badge/license-${answers.license}-green)](./LICENSE)
+ This application is covered by the ${answers.license} license. 
 
   ## Badges
   
   ## Questions
-  Yessenia's GitHub URL: ${data.gitHub}
-  I can be reached via email at ${data.email}
+  Yessenia's GitHub URL: ${answers.gitHub}
+  I can be reached via email at ${answers.email}
 `
 };
 

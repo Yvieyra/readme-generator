@@ -3,6 +3,26 @@ const inquirer = require('inquirer') // inquirer is a NPM package that allows us
 const generateMarkdown = require('./generateMarkdown'); //path to generateMarkdown.js to to be able to use "generateMarkdown" that has stored variables/methods
 const fs = require('fs'); // The 'fs" module allows us to interact wtih the file system 
 
+const mitLicense = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
+const gnuLicense = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]";
+const apacheLicense = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]";
+const mozillaLicense = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]";
+const boostLicense = "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]";
+
+const licenseChoices = [mitLicense, gnuLicense, apacheLicense, mozillaLicense, boostLicense];
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+// function renderLicenseLink(license) {
+//   return " ";
+// }
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+// function renderLicenseSection(license) {
+
+//   return " ";
+// }
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -34,7 +54,7 @@ const questions = [
         type: 'list', 
         name: 'license',
         message: 'Please select the license for your project.',
-        choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'Mozilla Public License 2.0', 'Boost Software License']
+        choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'Mozilla Public License 2.0', 'Boost Software License 1.0']
     },
     {
         type: 'input',
@@ -50,7 +70,13 @@ const questions = [
 function init() {
     inquirer.prompt(questions).then((answers) => {
     const readmeContent = generateMarkdown(answers);
+    console.log(readmeContent);
 
+    function renderLicenseBadge(license) {
+        let userChoice = answers.license ? `[![License](https://img.shields.io/badge/license-${answers.license}-green)](./LICENSE)` : '';
+      console.log(userChoice);
+      };
+      renderLicenseBadge();
     fs.writeFile('README.md', readmeContent, (err) =>
       err ? console.log(err) : console.log('Successfully created README.md file!')
     );
@@ -58,3 +84,13 @@ function init() {
 };
 
 init();
+
+
+
+// TODO: Create a function that returns a license badge based on which license is passed in
+// If there is no license, return an empty string
+// function renderLicenseBadge(license) {
+//   let userChoice = answers.license == licenseChoices[2] ? `![alt text]${mitLicense}` : '';
+// console.log(userChoice);
+// }
+//  renderLicenseBadge ();
