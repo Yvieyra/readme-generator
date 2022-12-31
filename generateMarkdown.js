@@ -1,4 +1,4 @@
-
+`[![License](https://img.shields.io/badge/license-${answers.license}-green)](./LICENSE) <br/>`
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   return `# ${answers.title}
@@ -24,7 +24,7 @@ function generateMarkdown(answers) {
   ${answers.credits}
   
   ## License
- [![License](https://img.shields.io/badge/license-${answers.license}-green)](./LICENSE)
+ [![License](https://img.shields.io/badge/license-${answers.license}-green)](./LICENSE) <br/>
  This application is covered by the ${answers.license} license. 
 
   ## Badges
