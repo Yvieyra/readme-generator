@@ -21,11 +21,11 @@
   yes
   
   ## License
- [![License](https://img.shields.io/badge/license-Apache License 2.0-green)](./LICENSE)
- This application is covered by the Apache License 2.0 license. 
+ [![License](https://img.shields.io/badge/license-Apache-green)](./LICENSE)
+ This application is covered by the Apache license. 
 
   ## Badges
   
   ## Questions
-  Yessenia's GitHub URL: yes
-  I can be reached via email at yes
+  Yessenia's GitHub URL: dkj
+  I can be reached via email at kjl
