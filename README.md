@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/badge/license-Boost-green)](./LICENSE)
+:---: [![License](https://img.shields.io/badge/license-Mozilla-green)](./LICENSE)
 
   # README.md Generator
 
@@ -23,9 +23,9 @@
   yes
   
   ## License
- [![License](https://img.shields.io/badge/license-Boost-green)](./LICENSE)  
+ [![License](https://img.shields.io/badge/license-Mozilla-green)](./LICENSE)  
   
- This application is covered by the Boost license. 
+ This application is covered by the Mozilla license. 
 
   ## Badges
   
