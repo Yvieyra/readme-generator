@@ -24,13 +24,15 @@ function generateMarkdown(answers) {
   ${answers.credits}
   
   ## License
- [![License](https://img.shields.io/badge/license-${answers.license}-green)](./LICENSE) <br/>
+ [![License](https://img.shields.io/badge/license-${answers.license}-green)](./LICENSE)  
+  
  This application is covered by the ${answers.license} license. 
 
   ## Badges
   
   ## Questions
   Yessenia's GitHub URL: ${answers.gitHub}
+  
   I can be reached via email at ${answers.email}
 `
 };
