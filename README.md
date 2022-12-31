@@ -1,4 +1,6 @@
-# README Generator
+[![License](https://img.shields.io/badge/license-Boost Software-green)](./LICENSE)
+
+  # README.md Generator 
 
   ## Description
   yes
@@ -21,9 +23,9 @@
   yes
   
   ## License
- [![License](https://img.shields.io/badge/license-Mozilla-green)](./LICENSE)  
+ [![License](https://img.shields.io/badge/license-Boost Software-green)](./LICENSE)  
   
- This application is covered by the Mozilla license. 
+ This application is covered by the Boost Software license. 
 
   ## Badges
   

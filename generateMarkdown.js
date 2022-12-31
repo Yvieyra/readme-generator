@@ -1,9 +1,9 @@
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
-  `[![License](https://img.shields.io/badge/license-${answers.license}-green)](./LICENSE)`
+   return `[![License](https://img.shields.io/badge/license-${answers.license}-green)](./LICENSE)
 
-  return `# ${answers.title}
+  # ${answers.title}
 
   ## Description
   ${answers.description}
