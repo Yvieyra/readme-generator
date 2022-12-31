@@ -1,6 +1,8 @@
-`[![License](https://img.shields.io/badge/license-${answers.license}-green)](./LICENSE) <br/>`
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
+  `[![License](https://img.shields.io/badge/license-${answers.license}-green)](./LICENSE)`
+
   return `# ${answers.title}
 
   ## Description
@@ -32,7 +34,7 @@ function generateMarkdown(answers) {
   
   ## Questions
   Yessenia's GitHub URL: ${answers.gitHub}
-  
+
   I can be reached via email at ${answers.email}
 `
 };

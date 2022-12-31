@@ -1,4 +1,4 @@
-# yes
+# README Generator
 
   ## Description
   yes
@@ -21,11 +21,13 @@
   yes
   
   ## License
- [![License](https://img.shields.io/badge/license-Apache-green)](./LICENSE)
- This application is covered by the Apache license. 
+ [![License](https://img.shields.io/badge/license-Mozilla-green)](./LICENSE)  
+  
+ This application is covered by the Mozilla license. 
 
   ## Badges
   
   ## Questions
-  Yessenia's GitHub URL: dkj
-  I can be reached via email at kjl
+  Yessenia's GitHub URL: yes
+
+  I can be reached via email at yes
