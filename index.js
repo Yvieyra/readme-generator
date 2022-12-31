@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
-const inquirer = require('inquirer')
-const generateMarkdown = require('./generateMarkdown');
-const fs = require('fs');
+const inquirer = require('inquirer') // inquirer is a NPM package that allows user input, allowing questions and answers through the terminal. 
+const generateMarkdown = require('./generateMarkdown'); //path to generateMarkdown.js to to be able to use "generateMarkdown" that has stored variables/methods
+const fs = require('fs'); // The 'fs" module allows us to interact wtih the file system 
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -31,9 +31,9 @@ const questions = [
         message: 'Please create your list of your collaborators/third party assets and provide the necessary links to each.',
     },
     {
-        type: 'list', //badge needs to get added to the top of the 
+        type: 'list', 
         name: 'license',
-        message: 'Enter your LinkedIn URL.',
+        message: 'Please select the license for your project.',
         choices: ['MIT', 'GNU GPLv3', 'Apache License 2.0', 'Mozilla Public License 2.0', 'Boost Software License']
     },
     {
