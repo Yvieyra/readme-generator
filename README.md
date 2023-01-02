@@ -1,9 +1,9 @@
-[![License](https://img.shields.io/badge/license-Mozilla-green)](./LICENSE)
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]
 
-  # README.md generator
+  # yes
 
   ## Description
-  alot
+  yes
   
   ## Table of Contents
 
@@ -14,23 +14,22 @@
   - [License](#license)
   
   ## Installation
-  123
+  yes
 
   ## Usage
   yes
  
   ## Credits
-  123
+  yes
   
   ## License
- [![License](https://img.shields.io/badge/license--green)](./LICENSE)  
  [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]
   
- This application is covered by the [![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)] license. 
+ This application is covered by the Mozilla license. 
 
   ## Badges
   
   ## Questions
-  Yessenia's GitHub URL: h
+  Yessenia's GitHub URL: yes
 
-  I can be reached via email at h
+  I can be reached via email at yes
