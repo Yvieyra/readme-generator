@@ -9,19 +9,6 @@ const apacheLicense = "[![License](https://img.shields.io/badge/License-Apache_2
 const mozillaLicense = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]";
 const boostLicense = "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]";
 
-const licenseChoices = [mitLicense, gnuLicense, apacheLicense, mozillaLicense, boostLicense];
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-// function renderLicenseLink(license) {
-//   return " ";
-// }
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-// function renderLicenseSection(license) {
-
-//   return " ";
-// }
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -70,11 +57,22 @@ const questions = [
 function init() {
     inquirer.prompt(questions).then((answers) => {
     const readmeContent = generateMarkdown(answers);
-    console.log(readmeContent);
-
-    function renderLicenseBadge(license) {
-        let userChoice = answers.license ? `[![License](https://img.shields.io/badge/license-${answers.license}-green)](./LICENSE)` : '';
-      console.log(userChoice);
+    let userChoice = answers.license;
+    function renderLicenseBadge() {
+        if (userChoice === 'MIT') {
+            license = mitLicense
+        } else if (userChoice === 'GNU GPLv3') {
+            license = gnuLicense
+        } else if (userChoice === 'Apache') {
+            license = apacheLicense
+        } else if (userChoice === 'Mozilla') {
+            license = mozillaLicense
+        } else if (userChoice === 'Boost') {
+            license = boostLicense
+            console.log(license)
+        } else {
+            license = "";
+        }
       };
       renderLicenseBadge();
     fs.writeFile('README.md', readmeContent, (err) =>
@@ -82,15 +80,11 @@ function init() {
     );
   });
 };
-
 init();
 
 
-
-// TODO: Create a function that returns a license badge based on which license is passed in
+// TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-// function renderLicenseBadge(license) {
-//   let userChoice = answers.license == licenseChoices[2] ? `![alt text]${mitLicense}` : '';
-// console.log(userChoice);
+// function renderLicenseLink(license) {
+//   return " ";
 // }
-//  renderLicenseBadge ();
