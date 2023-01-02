@@ -27,9 +27,9 @@ function generateMarkdown(answers) {
   
   ## License
  [![License](https://img.shields.io/badge/license--green)](./LICENSE)  
- ${answers.license}
+ ${license}
   
- This application is covered by the ${answers.license} license. 
+ This application is covered by the ${license} license. 
 
   ## Badges
   

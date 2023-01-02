@@ -56,9 +56,10 @@ const questions = [
 ]
 function init() {
     inquirer.prompt(questions).then((answers) => {
-    const readmeContent = generateMarkdown(answers);
+    
     let userChoice = answers.license;
     function renderLicenseBadge() {
+        
         if (userChoice === 'MIT') {
             license = mitLicense
         } else if (userChoice === 'GNU GPLv3') {
@@ -69,13 +70,13 @@ function init() {
             license = mozillaLicense
         } else if (userChoice === 'Boost') {
             license = boostLicense
-            console.log(license)
         } else {
             license = "";
         }
       };
       renderLicenseBadge();
-    fs.writeFile('README.md', readmeContent, (err) =>
+      const readmeContent = generateMarkdown(answers);
+    fs.writeFile('README.md', (readmeContent), (err) =>
       err ? console.log(err) : console.log('Successfully created README.md file!')
     );
   });
