@@ -1,4 +1,4 @@
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)(https://opensource.org/licenses/MIT)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   # README Generator
 
@@ -17,7 +17,7 @@
   The user will need to initialize a new npm package to install Inquierer 8.2.4.
 
   ## Usage
-  The usder will start the program by typing, node index.js. The terminal will provide a list of questions that the user can answer by typing them into the terminal.
+  The user will start the program by typing, node index.js. The terminal will provide a list of questions that the user can answer by typing them into the terminal.
  
   ## Credits
   node js. & Inquirer 8.2.4
@@ -28,7 +28,7 @@
  Link to license: https://opensource.org/licenses/MIT
 
   ## Badges
-  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)(https://opensource.org/licenses/MIT)
+  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
   ## Questions
   Yessenia's GitHub URL: https://github.com/Yvieyra
