@@ -3,19 +3,21 @@ const inquirer = require('inquirer') // inquirer is a NPM package that allows us
 const generateMarkdown = require('./generateMarkdown'); //path to generateMarkdown.js to to be able to use "generateMarkdown" that has stored variables/methods
 const fs = require('fs'); // The 'fs" module allows us to interact wtih the file system 
 
-const mitLicense = "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)(https://opensource.org/licenses/MIT)";
-const gnuLicense = "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)(https://www.gnu.org/licenses/gpl-3.0)";
-const apacheLicense = "![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)(https://opensource.org/licenses/Apache-2.0)";
-const mozillaLicense = "![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)(https://www.mozilla.org/en-US/MPL/2.0/)";
-const boostLicense = "![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)(https://www.boost.org/LICENSE_1_0.txt)";
+//The variables below are of the license badges to be displayed based on user choice. 
+const mitLicense = "![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)";
+const gnuLicense = "![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)";
+const apacheLicense = "![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)";
+const mozillaLicense = "![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)";
+const boostLicense = "![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)";
 
+//The variabes below are of the license badge links to be displaed based on user choice. 
 const mitLink = "https://opensource.org/licenses/MIT";
 const gnuLink = "https://www.gnu.org/licenses/gpl-3.0";
 const apacheLink = "https://opensource.org/licenses/Apache-2.0";
 const mozillaLink = "https://www.mozilla.org/en-US/MPL/2.0/";
 const boostLink = "https://www.boost.org/LICENSE_1_0.txt";
 
-// TODO: Create an array of questions for user input
+// Created an array of questions for user input stored in the variable, questions. 
 const questions = [
     {
         type: 'input',
@@ -59,11 +61,11 @@ const questions = [
         message: 'Please proivde your email address',
     },
 ]
-function init() {
-    inquirer.prompt(questions).then((answers) => {
+function init() { // function to initialize application 
+    inquirer.prompt(questions).then((answers) => { 
 
-        let userChoice = answers.license;
-        function renderLicenseBadge() {
+        let userChoice = answers.license; // userChoice is the license selected from the choices of licenses. 
+        function renderLicenseBadge() { //function inserts the license badge and license link in README.md file based on user choice. 
             if (userChoice === 'MIT') {
                 license = mitLicense;
                 licenseLink = mitLink;
@@ -83,12 +85,12 @@ function init() {
                 license = "";
             }
         };
-        renderLicenseBadge();
-        const readmeContent = generateMarkdown(answers);
-        fs.writeFile('README.md', (readmeContent), (err) =>
-            err ? console.log(err) : console.log('Successfully created README.md file!')
+        renderLicenseBadge(); // A call to the license badge and license link function 
+        const readmeContent = generateMarkdown(answers); // passing answers to generate markdown function in the generateMarkdown js file.
+        fs.writeFile('README.md', (readmeContent), (err) => //using 'fs' module to create the README.md file, that is taking in three parameters. File path, data, and callback. 
+            err ? console.log(err) : console.log('Successfully created README.md file!') //ternary operator
         );
     });
 };
-init();
+init(); // A call to the entire function.
 

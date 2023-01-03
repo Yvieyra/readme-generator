@@ -1,5 +1,5 @@
 
-// TODO: Create a function to generate markdown for README
+// Created a function to generate markdown for README
 function generateMarkdown(answers) {
    return `${license}
 
@@ -40,4 +40,4 @@ function generateMarkdown(answers) {
 `
 };
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown; // module.exports, an object used to store variables and methods that can be used on the same application and other js files. 
