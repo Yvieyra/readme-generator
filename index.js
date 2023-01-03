@@ -9,6 +9,11 @@ const apacheLicense = "![License](https://img.shields.io/badge/License-Apache_2.
 const mozillaLicense = "![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)(https://www.mozilla.org/en-US/MPL/2.0/)";
 const boostLicense = "![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)(https://www.boost.org/LICENSE_1_0.txt)";
 
+const mitLink = "https://opensource.org/licenses/MIT";
+const gnuLink = "https://www.gnu.org/licenses/gpl-3.0";
+const apacheLink = "https://opensource.org/licenses/Apache-2.0";
+const mozillaLink = "https://www.mozilla.org/en-US/MPL/2.0/";
+const boostLink = "https://www.boost.org/LICENSE_1_0.txt";
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -60,15 +65,20 @@ function init() {
         let userChoice = answers.license;
         function renderLicenseBadge() {
             if (userChoice === 'MIT') {
-                license = mitLicense
+                license = mitLicense;
+                licenseLink = mitLink;
             } else if (userChoice === 'GNU GPLv3') {
-                license = gnuLicense
+                license = gnuLicense;
+                licenseLink = gnuLink;
             } else if (userChoice === 'Apache 2.0') {
-                license = apacheLicense
+                license = apacheLicense;
+                licenseLink = apacheLink;
             } else if (userChoice === 'Mozilla 2.0') {
-                license = mozillaLicense
+                license = mozillaLicense;
+                licenseLink = mozillaLink;
             } else if (userChoice === 'Boost Software 1.0') {
-                license = boostLicense
+                license = boostLicense;
+                licenseLink = boostLink;
             } else {
                 license = "";
             }

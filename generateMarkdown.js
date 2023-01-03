@@ -26,16 +26,17 @@ function generateMarkdown(answers) {
   ${answers.credits}
   
   ## License
- ${license}
-  
+
  This application is covered by the ${answers.license} license. 
+ Link to license: ${licenseLink}
 
   ## Badges
-  
+  ${license}
+
   ## Questions
   Yessenia's GitHub URL: ${answers.gitHub}
 
-  I can be reached via email at ${answers.email}
+  If you have any questions. I can be reached via email at: ${answers.email}
 `
 };
 
